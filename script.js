@@ -1,6 +1,3 @@
-//your JS code here. If required.
-//your JS code here. If required.
-// get all panel elements
 const panels = document.querySelectorAll('.panel');
 
 // add click event listener to each panel
