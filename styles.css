@@ -1,1 +1,63 @@
 /*  your css code here. If applicable */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.panel {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+	border-radius:30px;
+}
+
+.panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.panel .img-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.panel.active {
+  width: 400px;
+  height: 400px;
+}
+
+.panel.active img {
+  transform: scale(1.2);
+}
+
+.panel.active .img-text {
+  opacity: 1;
+}
+
+.panel:not(.active) {
+  filter: grayscale(100%);
+}
+
+.panel:not(.active) img {
+  filter: grayscale(0%);
+}
